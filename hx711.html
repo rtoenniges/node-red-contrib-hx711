@@ -1,0 +1,51 @@
+<script type="text/javascript">
+    RED.nodes.registerType('hx711',{
+        category: 'Raspberry Pi',
+        color: '#a6bbcf',
+        defaults: {
+            	name: {value:""},
+		hx_data: {value:""},
+		hx_sck: {value:""},
+		hx_scale: {value:""},
+		hx_offset: {value:""},
+		hx_avrg: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-balance-scale",
+        label: function() {
+            return this.name||"hx711";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="hx711">
+    	<div class="form-row">
+       		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        	<input type="text" id="node-input-name" placeholder="Name">
+    	</div>
+	<div class="form-row">
+		<label for="node-input-hx_data"><i class="icon-tag"></i> DATA (GPIO-Pin)</label>
+		<input type="text" id="node-input-hx_data">
+	</div>
+	<div class="form-row">
+		<label for="node-input-hx_sck"><i class="icon-tag"></i> SCK (GPIO-Pin)</label>
+		<input type="text" id="node-input-hx_sck">
+	</div>
+	<div class="form-row">
+		<label for="node-input-hx_scale"><i class="icon-tag"></i> Scale</label>
+		<input type="text" id="node-input-hx_scale">
+	</div>
+	<div class="form-row">
+		<label for="node-input-hx_offset"><i class="icon-tag"></i> Offset (Optional)</label>
+		<input type="text" id="node-input-hx_offset">
+	</div>	
+	<div class="form-row">
+		<label for="node-input-hx_avrg"><i class="icon-tag"></i> Average</label>
+		<input type="text" id="node-input-hx_avrg">
+	</div>
+</script>
+
+<script type="text/html" data-help-name="hx711">
+    	<p>A node to get the weight from hx711 attached to the GPIOs.</p>
+</script>

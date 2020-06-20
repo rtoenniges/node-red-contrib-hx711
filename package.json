@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-hx711",
+  "version": "1.0.0",
+  "description": "Node to connect a hx711 module",
+  "main": "hx711.js",
+  "dependencies": {
+    "@shroudedcode/hx711": "latest" 
+  },
+  "keywords": [
+    "hx711",
+    "scales",
+    "weight"
+  ],
+  "author": {
+    "name": "Robin Tönniges",
+    "email": "development@toenniges.org"
+  }, 
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "hx711": "hx711.js"
+    }
+  }
+}
