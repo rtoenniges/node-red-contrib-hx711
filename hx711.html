@@ -4,11 +4,11 @@
         color: '#a6bbcf',
         defaults: {
             	name: {value:""},
-		hx_data: {value:""},
-		hx_sck: {value:""},
-		hx_scale: {value:""},
-		hx_offset: {value:""},
-		hx_avrg: {value:""}
+		hx_data: {value:"", "required": "true"},
+		hx_sck: {value:"", "required": "true"},
+		hx_scale: {value:"", "required": "true"},
+		hx_offset: {value:"0", "required": "true"},
+		hx_avrg: {value:"5", "required": "true"}
         },
         inputs:1,
         outputs:1,
@@ -37,7 +37,7 @@
 		<input type="text" id="node-input-hx_scale">
 	</div>
 	<div class="form-row">
-		<label for="node-input-hx_offset"><i class="icon-tag"></i> Offset (Optional)</label>
+		<label for="node-input-hx_offset"><i class="icon-tag"></i> Offset</label>
 		<input type="text" id="node-input-hx_offset">
 	</div>	
 	<div class="form-row">
