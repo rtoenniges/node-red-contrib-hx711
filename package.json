@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-hx711",
-  "version": "1.0.1",
+  "version": "1.0.1.1",
   "description": "Node to connect a hx711 module",
   "main": "hx711.js",
   "dependencies": {
@@ -22,4 +22,8 @@
       "hx711": "hx711.js"
     }
   }
+  "repository": {
+  "type" : "git",
+  "url" : "https://github.com/rtoenniges/node-red-contrib-hx711.git"
+}
 }
