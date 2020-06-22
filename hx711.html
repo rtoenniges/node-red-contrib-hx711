@@ -47,5 +47,24 @@
 </script>
 
 <script type="text/html" data-help-name="hx711">
-    	<p>A node to get the weight from hx711 attached to the GPIOs.</p>
+    <p>Simple node to get the weight value from a hx711, attached to the Raspberry Pis GPIOs.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>tare
+            <span class="property-type">any</span>
+        </dt>
+        <dd>RBE mode will accept numbers, strings, and simple objects. Other modes must provide a parseable number.</dd>
+        <dt class="optional">topic <span class="property-type">string</span>
+        </dt>
+        <dd>Whatever</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">number</span>
+        </dt>
+        <dd>Weight in gramms</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>To tare (set offset) the scales send any message to <code>msg.tare</code></p>
 </script>
