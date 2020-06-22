@@ -21,7 +21,7 @@
     "nodes": {
       "hx711": "hx711.js"
     }
-  }
+  },
   "repository": {
   "type" : "git",
   "url" : "https://github.com/rtoenniges/node-red-contrib-hx711.git"
