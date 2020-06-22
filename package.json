@@ -9,7 +9,8 @@
   "keywords": [
     "hx711",
     "scales",
-    "weight"
+    "weight",
+    "node-red"
   ],
   "author": {
     "name": "Robin Tönniges",
