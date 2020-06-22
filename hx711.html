@@ -53,10 +53,7 @@
         <dt>tare
             <span class="property-type">any</span>
         </dt>
-        <dd>RBE mode will accept numbers, strings, and simple objects. Other modes must provide a parseable number.</dd>
-        <dt class="optional">topic <span class="property-type">string</span>
-        </dt>
-        <dd>Whatever</dd>
+        <dd>Input any value will tare the scale to zero</dd>
     </dl>
     <h3>Outputs</h3>
     <dl class="message-properties">
@@ -66,5 +63,8 @@
         <dd>Weight in gramms</dd>
     </dl>
     <h3>Details</h3>
-    <p>To tare (set offset) the scales send any message to <code>msg.tare</code></p>
+    <p>In the config for <code>DATA</code> and <code>SCK</code>, you have to set the hardware pin numbers NOT the GPIO number!</p>
+	<p>With <code>SCALE</code> you set the calibration factor.</p>
+	<p>With <code>OFFSET</code> you can set an offset to the output value</p>
+	<p>With <code>AVERAGE</code> you can get the mean value of the output by the number you typed in. (The higher the number is, the higher the CPU load gets!)</p>
 </script>
