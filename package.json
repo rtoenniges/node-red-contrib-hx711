@@ -25,5 +25,5 @@
   "repository": {
   "type" : "git",
   "url" : "https://github.com/rtoenniges/node-red-contrib-hx711.git"
-}
+  }
 }
