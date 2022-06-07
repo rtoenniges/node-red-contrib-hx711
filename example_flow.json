@@ -1,1 +1,131 @@
-[{"id":"5d3ceb36.b1a4a4","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"ccb72235.6747","type":"inject","z":"5d3ceb36.b1a4a4","name":"","repeat":"2","crontab":"","once":true,"onceDelay":0.1,"topic":"","payload":"Initialize","payloadType":"str","x":360,"y":200,"wires":[["42a327b2.f97038"]]},{"id":"ccc66ff.aaaca9","type":"smooth","z":"5d3ceb36.b1a4a4","name":"","property":"payload","action":"mean","count":"30","round":"","mult":"single","reduce":false,"x":900,"y":260,"wires":[["4fd730ff.04898"]]},{"id":"25eb352f.bccd5a","type":"rbe","z":"5d3ceb36.b1a4a4","name":"","func":"narrowband","gap":"0.5","start":"","inout":"in","property":"payload","x":750,"y":260,"wires":[["ccc66ff.aaaca9"]]},{"id":"42a327b2.f97038","type":"hx711","z":"5d3ceb36.b1a4a4","name":"","hx_data":"36","hx_sck":"38","hx_scale":"216.7","hx_offset":"0","hx_avrg":"1","x":590,"y":260,"wires":[["25eb352f.bccd5a"]]},{"id":"4fd730ff.04898","type":"debug","z":"5d3ceb36.b1a4a4","name":"weight","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","statusVal":"","statusType":"auto","x":1050,"y":260,"wires":[]},{"id":"285228f5.b48c18","type":"inject","z":"5d3ceb36.b1a4a4","name":"Tare","props":[{"p":"tare","v":"","vt":"date"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","x":350,"y":260,"wires":[["42a327b2.f97038"]]}]
+[
+    {
+        "id": "5d3ceb36.b1a4a4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ccb72235.6747",
+        "type": "inject",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "",
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Initialize",
+        "payloadType": "str",
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "42a327b2.f97038"
+            ]
+        ]
+    },
+    {
+        "id": "25eb352f.bccd5a",
+        "type": "rbe",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "",
+        "func": "narrowband",
+        "gap": "0.5",
+        "start": "",
+        "inout": "in",
+        "property": "payload",
+        "x": 750,
+        "y": 260,
+        "wires": [
+            [
+                "ccc66ff.aaaca9"
+            ]
+        ]
+    },
+    {
+        "id": "42a327b2.f97038",
+        "type": "hx711",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "",
+        "hx_data": "36",
+        "hx_sck": "38",
+        "hx_scale": "216.7",
+        "hx_gain": "64",
+        "hx_offset": "0",
+        "hx_avrg": "1",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "25eb352f.bccd5a"
+            ]
+        ]
+    },
+    {
+        "id": "4fd730ff.04898",
+        "type": "debug",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "weight",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "285228f5.b48c18",
+        "type": "inject",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "Tare",
+        "props": [
+            {
+                "p": "tare",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "42a327b2.f97038"
+            ]
+        ]
+    },
+    {
+        "id": "ccc66ff.aaaca9",
+        "type": "smooth",
+        "z": "5d3ceb36.b1a4a4",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "30",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 940,
+        "y": 260,
+        "wires": [
+            [
+                "4fd730ff.04898"
+            ]
+        ]
+    }
+]
