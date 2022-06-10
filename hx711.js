@@ -5,7 +5,7 @@ module.exports = function(RED) {
 		this.hx_data = config.hx_data;
 		this.hx_sck = config.hx_sck;
 		this.hx_scale = config.hx_scale;
-		this.hx_gain = config.hx_scale;
+		this.hx_gain = config.hx_gain;
 		this.hx_offset = config.hx_offset;
 		this.hx_avrg = config.hx_avrg;		
 
