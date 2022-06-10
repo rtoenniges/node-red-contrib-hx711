@@ -10,10 +10,9 @@ module.exports = function(RED) {
 		this.hx_avrg = config.hx_avrg;		
 
 		const hx711 = require("@shroudedcode/hx711");
-		const sensor = new hx711(this.hx_sck, this.hx_data);
+		const sensor = new hx711(this.hx_sck, this.hx_data, this.hx_gain);
 
 		sensor.setScale(this.hx_scale);	
-		sensor.setGain(this.hx_gain);
 
 		this.status({fill:"blue",shape:"dot",text:"ok"});
 	
