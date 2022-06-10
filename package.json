@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-hx711",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Node to connect a hx711 module",
   "main": "hx711.js",
   "dependencies": {
